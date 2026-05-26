@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amadou Sangaré | Carte Digitale</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+
+        :root {
+            --bleu-nuit: #0a192f;
+            --beige: #f5f5dc;
+            --jaune-or: #d4af37;
+            --card-bg: rgba(10, 25, 47, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background:
+            linear-gradient(rgba(10, 25, 47, 0.8),
+            rgba(10, 25, 47, 0.8)),
+            url('images/ami-fruite.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            color: var(--beige);
+        }
+
+        .container {
+
+            width: 100%;
+            max-width: 400px;
+
+            background: var(--card-bg);
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--jaune-or);
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+
+            text-align: center;
+        }
+
+        .profile-img {
+
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 3px solid var(--jaune-or);
+
+            box-shadow: 0 0 15px var(--jaune-or);
+
+            margin-bottom: 15px;
+        }
+
+        h1 {
+
+            color: var(--jaune-or);
+
+            margin-bottom: 8px;
+
+            font-size: 1.7rem;
+        }
+
+        p {
+
+            margin-bottom: 25px;
+
+            opacity: 0.8;
+        }
+
+        .action-buttons,
+        .links-container {
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .link-item {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+
+            padding: 14px;
+
+            border-radius: 10px;
+
+            background: var(--jaune-or);
+
+            color: var(--bleu-nuit);
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .link-item:hover {
+
+            background: var(--beige);
+
+            transform: translateY(-3px);
+        }
+
+        .video-container {
+
+            margin-bottom: 20px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--jaune-or);
+        }
+
+        iframe {
+
+            width: 100%;
+            height: 220px;
+
+            border: none;
+        }
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        form input {
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            background: rgba(255,255,255,0.1);
+
+            color: white;
+
+            font-size: 1rem;
+        }
+
+        form input::placeholder {
+
+            color: rgba(255,255,255,0.6);
+        }
+
+        form button {
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: var(--jaune-or);
+
+            color: var(--bleu-nuit);
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        form button:hover {
+
+            background: var(--beige);
+        }
+
+        h3 {
+
+            margin-top: 30px;
+
+            margin-bottom: 15px;
+
+            color: var(--jaune-or);
+        }
+
+        .portfolio-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .portfolio-grid img {
+
+            width: 100%;
+            height: 100px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            border: 1px solid rgba(212,175,55,0.3);
+
+            transition: 0.3s;
+        }
+
+        .portfolio-grid img:hover {
+
+            transform: scale(1.05);
+
+            border-color: var(--jaune-or);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- PHOTO -->
+    <img src="images/1765311669614.jpg"
+         alt="Amadou Sangaré"
+         class="profile-img">
+
+    <!-- NOM -->
+    <h1>Amadou Sangare</h1>
+
+    <!-- PROFESSION -->
+    <p>Creative Tech Designer</p>
+
+    <!-- BOUTONS -->
+    <div class="action-buttons">
+
+        <a href="tel:+22362696220"
+           class="link-item">
+
+            <i class="fas fa-phone"></i>
+
+            Appeler
+
+        </a>
+
+        <a href="amadou-contact.vcf"
+           download
+           class="link-item">
+
+            <i class="fas fa-user-plus"></i>
+
+            Enregistrer Contact
+
+        </a>
+
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-container">
+
+        <iframe
+            src="https://gieami.net"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <!-- RESEAUX -->
+    <div class="links-container">
+
+       <a href="https://wa.me/22362696220?text=Bonjour%20Amadou%20je%20viens%20de%20voir%20votre%20carte%20digitale"
+   target="_blank"
+   class="link-item">
+
+   <i class="fab fa-whatsapp"></i>
+
+   WhatsApp
+
+</a>
+        </a>
+
+        <a href="https://linkedin.com/in/amadou-sangare-6881793a4"
+           target="_blank"
+           class="link-item">
+
+            <i class="fab fa-linkedin"></i>
+
+            LinkedIn
+
+        </a>
+
+        <a href="https://instagram.com/genissedistribution"
+           target="_blank"
+           class="link-item">
+
+            <i class="fab fa-instagram"></i>
+
+            Instagram
+
+        </a>
+<a href="mailto:tonemail@gmail.com"
+   class="link-item">
+
+   <i class="fas fa-envelope"></i>
+
+   Email
+
+</a>
+
+    </div>
+
+    <!-- FORMULAIRE -->
+    <form id="contact-form">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Votre nom"
+            required>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Votre WhatsApp"
+            required>
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Entreprise">
+
+        <button type="submit">
+
+            Entrer dans notre réseau
+
+        </button>
+
+    </form>
+
+    <!-- GALERIE -->
+    <h3>GALERIE</h3>
+
+    <div class="portfolio-grid">
+
+        <img
+            src="images/116134737_908516199647984_2609802331308053715_n.jpg"
+            alt="AMI FRUITE">
+
+        <img
+            src="images/98003214_855839768248961_7615231935001919488_n.jpg"
+            alt="DIAGO">
+
+    </div>
+
+</div>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+    // CONFIGURATION SUPABASE
+    const supabaseUrl =
+    'https://avvihtnozxlxneneykxr.supabase.co';
+
+    const supabaseKey =
+    'sb_publishable_0XtG9nV4AMthfis6Pzi1eg_7OBF3BS6';
+
+    // CREATION CLIENT
+    const supabaseClient =
+    supabase.createClient(
+        supabaseUrl,
+        supabaseKey
+// INITIALISATION EMAILJS
+emailjs.init("BFAq9Gq2qOI-eerhx");
+    );
+
+    // FORMULAIRE
+    const form =
+    document.getElementById('contact-form');
+
+    form.addEventListener('submit', async (e) => {
+
+        e.preventDefault();
+
+        // RECUPERATION DES DONNEES
+        const name =
+        document.getElementById('name').value;
+
+        const phone =
+        document.getElementById('phone').value;
+
+        const company =
+        document.getElementById('company').value;
+
+        // INSERTION SUPABASE
+        const { data, error } =
+        await supabaseClient
+
+            .from('contact')
+
+            .insert([
+                {
+                    Nom: name,
+                    phone: phone,
+                    entreprise: company
+                }
+            ]);
+
+        // ERREUR
+        if (error) {
+
+            console.error(error);
+
+            alert(
+                "Erreur : " + error.message
+            );
+
+        }
+
+        // SUCCES
+        else {
+
+            alert(
+                "Informations envoyées avec succès !"
+            );
+
+            form.reset();
+// ENVOI EMAIL
+emailjs.send(
+    "service_k3spn3f",
+    "template_j3pep2s",
+    {
+        name: name,
+        phone: phone,
+        company: company
+    }
+);
+
+            console.log(data);
+
+        }
+
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</body>
+</html>
