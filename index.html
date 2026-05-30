@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Amadou Sangaré | Carte Digitale</title>
 
-    <!-- FONT AWESOME -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -29,12 +26,11 @@
         }
 
         body {
-
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
             background:
-            linear-gradient(rgba(10, 25, 47, 0.8),
-            rgba(10, 25, 47, 0.8)),
+            linear-gradient(rgba(10,25,47,0.8),
+            rgba(10,25,47,0.8)),
             url('images/ami-fruite.jpg');
 
             background-size: cover;
@@ -53,7 +49,6 @@
         }
 
         .container {
-
             width: 100%;
             max-width: 400px;
 
@@ -71,12 +66,10 @@
         }
 
         .profile-img {
-
             width: 120px;
             height: 120px;
 
             border-radius: 50%;
-
             object-fit: cover;
 
             border: 3px solid var(--jaune-or);
@@ -87,34 +80,25 @@
         }
 
         h1 {
-
             color: var(--jaune-or);
-
             margin-bottom: 8px;
-
             font-size: 1.7rem;
         }
 
         p {
-
             margin-bottom: 25px;
-
             opacity: 0.8;
         }
 
         .action-buttons,
         .links-container {
-
             display: flex;
             flex-direction: column;
-
             gap: 12px;
-
             margin-bottom: 20px;
         }
 
         .link-item {
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -137,107 +121,38 @@
         }
 
         .link-item:hover {
-
             background: var(--beige);
-
             transform: translateY(-3px);
         }
 
         .video-container {
-
             margin-bottom: 20px;
 
             border-radius: 12px;
-
             overflow: hidden;
 
             border: 1px solid var(--jaune-or);
         }
 
         iframe {
-
             width: 100%;
             height: 220px;
-
             border: none;
-        }
-
-        form {
-
-            display: flex;
-            flex-direction: column;
-
-            gap: 12px;
-
-            margin-top: 25px;
-        }
-
-        form input {
-
-            padding: 14px;
-
-            border: none;
-
-            border-radius: 10px;
-
-            outline: none;
-
-            background: rgba(255,255,255,0.1);
-
-            color: white;
-
-            font-size: 1rem;
-        }
-
-        form input::placeholder {
-
-            color: rgba(255,255,255,0.6);
-        }
-
-        form button {
-
-            padding: 14px;
-
-            border: none;
-
-            border-radius: 10px;
-
-            background: var(--jaune-or);
-
-            color: var(--bleu-nuit);
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-        }
-
-        form button:hover {
-
-            background: var(--beige);
         }
 
         h3 {
-
             margin-top: 30px;
-
             margin-bottom: 15px;
-
             color: var(--jaune-or);
         }
 
         .portfolio-grid {
-
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 12px;
         }
 
         .portfolio-grid img {
-
             width: 100%;
             height: 100px;
 
@@ -251,9 +166,7 @@
         }
 
         .portfolio-grid img:hover {
-
             transform: scale(1.05);
-
             border-color: var(--jaune-or);
         }
 
@@ -265,84 +178,62 @@
 
 <div class="container">
 
-    <!-- PHOTO -->
     <img src="1765311669614.jpg"
          alt="Amadou Sangaré"
          class="profile-img">
 
-    <!-- NOM -->
     <h1>Amadou Sangare</h1>
 
-    <!-- PROFESSION -->
     <p>Creative Tech Designer</p>
 
-    <!-- BOUTONS -->
     <div class="action-buttons">
 
-        <a href="tel:+22362696220"
-           class="link-item">
-
+        <a href="tel:+22362696220" class="link-item">
             <i class="fas fa-phone"></i>
-
             Appeler
-
         </a>
 
         <a href="amadou-contact.vcf"
            download
            class="link-item">
-
             <i class="fas fa-user-plus"></i>
-
             Enregistrer Contact
-
         </a>
 
     </div>
 
-    <!-- VIDEO -->
     <div class="video-container">
-
         <iframe
             src="https://gieami.net"
             allowfullscreen>
         </iframe>
-
     </div>
 
-    <!-- RESEAUX -->
     <div class="links-container">
 
-       <a href="https://wa.me/22362696220?text=Bonjour%20Amadou%20je%20viens%20de%20voir%20votre%20carte%20digitale"
-   target="_blank"
-   class="link-item">
-
-   <i class="fab fa-whatsapp"></i>
-
-   WhatsApp
-
-</a>
+        <a href="https://wa.me/22362696220?text=Bonjour%20Amadou%20je%20viens%20de%20voir%20votre%20carte%20digitale"
+           target="_blank"
+           class="link-item">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
         </a>
 
         <a href="https://linkedin.com/in/amadou-sangare-6881793a4"
            target="_blank"
            class="link-item">
-
             <i class="fab fa-linkedin"></i>
-
             LinkedIn
-
         </a>
 
         <a href="https://instagram.com/genissedistribution"
            target="_blank"
            class="link-item">
-
             <i class="fab fa-instagram"></i>
-
             Instagram
-   
-    <!-- GALERIE -->
+        </a>
+
+    </div>
+
     <h3>GALERIE</h3>
 
     <div class="portfolio-grid">
