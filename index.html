@@ -354,34 +354,7 @@
 
     </div>
 
-    <!-- FORMULAIRE -->
-    <form id="contact-form">
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Votre nom"
-            required>
-
-        <input
-            type="tel"
-            id="phone"
-            placeholder="Votre WhatsApp"
-            required>
-
-        <input
-            type="text"
-            id="company"
-            placeholder="Entreprise">
-
-        <button type="submit">
-
-            Entrer dans notre réseau
-
-        </button>
-
-    </form>
-
+   
     <!-- GALERIE -->
     <h3>GALERIE</h3>
 
@@ -398,98 +371,6 @@
     </div>
 
 </div>
-
-<!-- SUPABASE -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-
-    // CONFIGURATION SUPABASE
-    const supabaseUrl =
-    'https://avvihtnozxlxneneykxr.supabase.co';
-
-    const supabaseKey =
-    'sb_publishable_0XtG9nV4AMthfis6Pzi1eg_7OBF3BS6';
-
-    // CREATION CLIENT
-    const supabaseClient =
-    supabase.createClient(
-        supabaseUrl,
-        supabaseKey
-// INITIALISATION EMAILJS
-emailjs.init("BFAq9Gq2qOI-eerhx");
-    );
-
-    // FORMULAIRE
-    const form =
-    document.getElementById('contact-form');
-
-    form.addEventListener('submit', async (e) => {
-
-        e.preventDefault();
-
-        // RECUPERATION DES DONNEES
-        const name =
-        document.getElementById('name').value;
-
-        const phone =
-        document.getElementById('phone').value;
-
-        const company =
-        document.getElementById('company').value;
-
-        // INSERTION SUPABASE
-        const { data, error } =
-        await supabaseClient
-
-            .from('contact')
-
-            .insert([
-                {
-                    Nom: name,
-                    phone: phone,
-                    entreprise: company
-                }
-            ]);
-
-        // ERREUR
-        if (error) {
-
-            console.error(error);
-
-            alert(
-                "Erreur : " + error.message
-            );
-
-        }
-
-        // SUCCES
-        else {
-
-            alert(
-                "Informations envoyées avec succès !"
-            );
-
-            form.reset();
-// ENVOI EMAIL
-emailjs.send(
-    "service_k3spn3f",
-    "template_j3pep2s",
-    {
-        name: name,
-        phone: phone,
-        company: company
-    }
-);
-
-            console.log(data);
-
-        }
-
-    });
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </body>
 </html>
